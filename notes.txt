@@ -1,0 +1,64 @@
+-Server actions:
+Sirven para gestionar acciones como recoger los datos de un formulario y pasarlos a una base de datos.
+-Tenemos que usar "user client" cuando usamos un componente de cliente y crear otro archivo si es necesario, 
+para no afectar todo el archivo del servidor.
+-Para usar un componente de servidor desde el cliente tenemos que crear un archivo en una 
+carpeta "actions", fuera de las demas carpetas y luego importarlos en el cliente. En ves de 
+onSubmit usamos action={} para llamar a la funcion que llamara a los actions
+-FormData es una variable que recoge los datos del formulario
+
+
+-Layout es un componente que renderiza todos los archivos dentro
+-Page seria como una pagina de inicio(componente padre) y renderizamos todo con {children}
+-Siempre hay que tratar de hacer comprobaciones tanto en el cliente como en el servidor
+
+
+-Podemos usar componentes asincronos
+
+
+-Las rutas se establecen con las carpetas dentro de la carpeta app, cada carpeta sera una ruta 
+y dentro podran tener otras carpetas donde ingresaremos a otras rutas. Page sera el index 
+y layout renderiza todos los componentes como componente padre (renderiza a los children)
+
+
+Diferencias con React nativo====>>>>
+-Se usa link con href=, no con to=
+-Se usa Image para las imagenes para que carguen mas rapido
+
+Promises====>>>>
+-Como son consultas independientes ejecutamos con await al mismo tiempo, en next
+se debe hacer con Promise.all
+
+
+Ejecutar un componente de servidor en componente de cliente:
+-Para esto nos apoyamos de los componentes de composicion, insertamos un children en el comp de
+cliente y lo definimos como React.ReactNode, luego al momento de colocar el componente de cliente 
+pasamos como hijo de ese componente al componente de servidor
+
+-Cuando trabajamos con rutas dinamicas, tenemos que crear una carpeta con el nombre de el parametro
+que va a cambiar asi [id] o [category] y dentro crear la carpetas del resto de la ruta. Y luego
+recuperamos el valor con params
+
+
+-Redirect se usa en componente de servidor
+-Router en el cliente (router.push)
+
+-Podemos usar swr como react query para hacer revalidaciones y actualizar el cache,
+para ellos tenemos que crear una ruta de /api y dentro el route.ts con esta sintaxis
+import { prisma } from "@/src/lib/prisma"
+
+export async function GET(){ //colocamos get, post, put, delete, etx
+      const orders = await prisma.order.findMany({
+        where: {
+          status: false
+        },
+        include: {
+          orderProducts: {
+            include: {
+              product: true
+            }
+          }
+        }
+      })    
+    return Response.json(orders) //mandamos la respuesta
+}
