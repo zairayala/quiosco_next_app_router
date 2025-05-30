@@ -23,7 +23,7 @@ Esta aplicación permite a los usuarios armar y confirmar pedidos, y al personal
 - 📋 **Lista de órdenes pendientes**: visualización de los pedidos en cola  
 - ✅ **Lista de órdenes listas**: seguimiento de pedidos completados para entrega  
 - ✏️ **Edición de productos**: modificar nombre, precio, imagen y categoría  
-
+- ➕ **Creación de productos**: modificar nombre, precio, imagen y categoría  
 ---
 
 ## 📸 Captura: Página principal
