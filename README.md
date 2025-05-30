@@ -1,36 +1,61 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ☕ Café de Ideas - Sistema de Pedidos
 
-## Getting Started
+Sistema de pedidos para la cafetería **Café de Ideas**, desarrollado con **Next.js**, **Prisma**, **TailwindCSS**, **TypeScript** y **PostgreSQL**.
 
-First, run the development server:
+Esta aplicación permite a los usuarios armar y confirmar pedidos, y al personal gestionar el flujo de órdenes sin necesidad de autenticación.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Tecnologías utilizadas
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Next.js  
+- TypeScript  
+- TailwindCSS  
+- Prisma ORM  
+- PostgreSQL  
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🔥 Funcionalidades principales
 
-To learn more about Next.js, take a look at the following resources:
+- 🗂 **Gestión de productos** por categorías (bebidas calientes, frías, postres, etc.)  
+- 🛒 **Mis pedidos**: los usuarios pueden armar y confirmar su pedido fácilmente  
+- 📋 **Lista de órdenes pendientes**: visualización de los pedidos en cola  
+- ✅ **Lista de órdenes listas**: seguimiento de pedidos completados para entrega  
+- ✏️ **Edición de productos**: modificar nombre, precio, imagen y categoría  
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📸 Captura: Página principal
+![image](https://github.com/user-attachments/assets/2f080e26-b481-4b3b-bd48-118b6103f19f)
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📸 Captura: Gestión de productos
+![image](https://github.com/user-attachments/assets/1f4dbd6f-4c6c-4f44-86c8-9bbf3c0c289a)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 📸 Captura: Lista de órdenes pendientes
+
+![image](https://github.com/user-attachments/assets/102e55c5-a6e1-49f6-83fd-eace76bf65a5)
+
+---
+
+## 📸 Captura: Lista de órdenes listas
+
+![image](https://github.com/user-attachments/assets/2d795eea-2022-4d3a-a0cb-fdd56c396570)
+
+---
+
+## 📸 Captura: Edición de productos
+
+![image](https://github.com/user-attachments/assets/fa706f70-7839-4dbf-8434-0f7c56e3f196)
+
+---
+## 📸 Captura: Creacion de productos
+
+![image](https://github.com/user-attachments/assets/fc666c04-6905-4d8c-bcfd-6fa2ccbdc64e)
+
+
+
