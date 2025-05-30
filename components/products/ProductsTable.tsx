@@ -10,7 +10,7 @@ export default function ProductTable({products} : ProductTableProps) {
         <div className="px-4 sm:px-6 lg:px-8 mt-20">
             <div className="mt-8 flow-root ">
                 <div className="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
-                    <div className="inline-block min-w-full py-2 align-middle sm:px-6 lg:px-8 bg-white p-5 ">
+                    <div className="inline-block min-w-full py-2 align-middle sm:px-6 lg:px-8 bg-[#f1ebe6] rounded-xl p-5 ">
                         <table className="min-w-full divide-y divide-gray-300 ">
                             <thead>
                                 <tr>
@@ -36,15 +36,15 @@ export default function ProductTable({products} : ProductTableProps) {
                                     </td>
                                     <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
                                         {formatCurrency(product.price)}
-                                    </td> 
+                                    </td>
                                     <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
                                         {product.category.name}
                                     </td>
                                     <td className="relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-0">
                                         <Link
                                             href={`/admin/products/${product.id}/edit`}
-                                            className="text-indigo-600 hover:text-indigo-800"
-                                        >Editar <span className="sr-only">, {product.name}</span></Link>
+                                            className="text-[#5c4a38] hover:[#5c4a38]/90"
+                                        >Editar<span className="sr-only">, {product.name}</span></Link>
                                     </td>
                                 </tr>
                                 

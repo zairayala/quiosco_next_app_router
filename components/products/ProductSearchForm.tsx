@@ -28,7 +28,7 @@ export default function ProductSearchForm() {
             name="search"
         />
         <input type="submit" 
-            className="bg-indigo-600 p-2 uppercase text-white cursor-pointer"
+            className="bg-[#5c4a38] hover:bg-[#5c4a38]/90 transition-colors p-2 uppercase text-white cursor-pointer"
             value={'Buscar'}
         />
     </form>

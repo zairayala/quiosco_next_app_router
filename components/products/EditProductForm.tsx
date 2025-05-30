@@ -35,7 +35,7 @@ export default function EditProductForm({children} : {children: React.ReactNode}
         router.push('/admin/products')
     }
     return (
-        <div className='bg-white mt-10 px-5 py-10 rounded-md shadow-md max-w-3xl mx-auto'>
+        <div className='mt-10 bg-[#f1ebe6] px-5 py-10 rounded-md shadow-md max-w-3xl mx-auto'>
             <form
                 action={handleSubmit}
                 className='space-y-5'
@@ -43,7 +43,7 @@ export default function EditProductForm({children} : {children: React.ReactNode}
                 {children}
                 <input
                     type="submit"
-                    className='bg-indigo-600 hover:bg-indigo-800 text-white w-full mt-5 p-3 uppercase
+                    className='bg-[#5c4a38] hover:bg-[#5c4a38]/90 transition-colors text-white w-full mt-5 p-3 uppercase
             font-bold cursor-pointer'
                     value='Guardar cambios'
                 />

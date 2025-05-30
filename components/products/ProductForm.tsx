@@ -12,7 +12,7 @@ export default async function ProductForm({product} : ProductFormProps) {
     const categories = await getCategories()
     return (
         <>
-            <div className="space-y-2">
+            <div className="space-y-2 rounded-xl">
                 <label
                     className="text-slate-800"
                     htmlFor="name"
@@ -21,7 +21,7 @@ export default async function ProductForm({product} : ProductFormProps) {
                     id="name"
                     type="text"
                     name="name"
-                    className="block w-full p-3 bg-slate-100"
+                    className="block w-full p-3 bg-white"
                     placeholder="Nombre Producto"
                     defaultValue={product?.name}
                 />
@@ -35,7 +35,7 @@ export default async function ProductForm({product} : ProductFormProps) {
                 <input
                     id="price"
                     name="price"
-                    className="block w-full p-3 bg-slate-100"
+                    className="block w-full p-3 bg-white"
                     placeholder="Precio Producto"
                     defaultValue={product?.price}
 
@@ -48,7 +48,7 @@ export default async function ProductForm({product} : ProductFormProps) {
                     htmlFor="categoryId"
                 >Categoría:</label>
                 <select
-                    className="block w-full p-3 bg-slate-100"
+                    className="block w-full p-3 bg-white"
                     id="categoryId"
                     name="categoryId"
                     defaultValue={product?.categoryId}

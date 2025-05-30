@@ -19,14 +19,14 @@ export default function OrderSummary() {
       order
     }
     const result = OrderSchema.safeParse(data) //validacion del cliente
-    if(!result.success){
+    if (!result.success) {
       result.error.issues.forEach((issue) => { //accedemos al error de zod
         toast.error(issue.message)
       })
       return
     }
     const response = await createOrder(data)
-    if(response?.errors){
+    if (response?.errors) {
       response.errors.forEach((issue) => { //accedemos al error de zod
         toast.error(issue.message)
       })
@@ -35,10 +35,11 @@ export default function OrderSummary() {
     toast.success('Pedido realizado correctamente')
     clearOrder()
   }
+  
   return (
-    <aside className='lg:h-screen lg:overflow-y-scroll md:w-64 lg:w-96 p-5'>
-      <h1 className='text-4xl text-center font-black'>Mi pedido</h1>
-      {order.length === 0 ? <p className='text-center my-10'>El pedido esta vacio</p> : (
+    <aside className='lg:h-screen lg:overflow-y-scroll md:w-64 lg:w-96 p-5 bg-white shadow-xs'>
+      <h1 className='text-2xl text-start font-bold'>Mi pedido</h1>
+      {order.length === 0 ? <p className='text-start my-10'>El pedido esta vacio</p> : (
         <div className='mt-5'>
           {order.map(item => (
             <ProductDetails
@@ -54,7 +55,7 @@ export default function OrderSummary() {
             className="w-full mt-10 space-y-5"
             action={handleCreateOrder}
           >
-            <input 
+            <input
               type="text"
               placeholder='Tu nombre'
               className='bg-white border border-gray-100 p-2 w-full'
@@ -62,7 +63,7 @@ export default function OrderSummary() {
             />
             <input
               type="submit"
-              className='py-2 rounded uppercase text-white bg-black w-full text-center cursor-pointer font-bold'
+              className='py-2 rounded uppercase text-white bg-orange-950 w-full text-center cursor-pointer font-bold'
               value='Confirmar pedido'
             />
           </form>

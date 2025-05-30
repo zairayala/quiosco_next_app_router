@@ -24,9 +24,9 @@ async function getProducts(page: number, pageSize: number) {
 
 export type ProductsWithCategory = Awaited<ReturnType<typeof getProducts>> //le decimos a ts que nos diga el type de lo que devuelve getproducts
 
-export default async function ProductsPage({ searchParams }: { searchParams: { page: string } }) { //recuperamos el valor del parametro que escribimos
+export default async function ProductsPage({ searchParams }: { searchParams: Promise<{ page: string }> }) { //recuperamos el valor del parametro que escribimos
 
-  const page = +searchParams.page || 1 //recupera la pagiba y si es que no tenemos un numero entonces que sea por default 1
+  const page = +searchParams || 1 //recupera la pagina y si es que no tenemos un numero entonces que sea por default 1
   const pageSize = 10
 
   if (page < 0) redirect('/admin/products')
@@ -44,7 +44,7 @@ export default async function ProductsPage({ searchParams }: { searchParams: { p
       <div className="flex flex-col lg:flex-row lg:justify-between gap-5">
         <Link
           href={'/admin/products/new'}
-          className="bg-amber-400 w-full lg:w-auto text-xl px-10 py-3 text-center cursor-pointer font-bold"
+          className="bg-[#5c4a38] hover:bg-[#5c4a38]/90 transition-colors text-white rounded-md w-full lg:w-auto text-xl px-10 py-3 text-center cursor-pointer font-semibold"
         >Crear producto</Link>
         <ProductSearchForm />
       </div>

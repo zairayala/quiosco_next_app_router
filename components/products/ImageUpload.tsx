@@ -28,7 +28,7 @@ export default function ImageUpload({ image }: { image: string | undefined }) {
                         <label className="text-slate-800">Imagen producto</label>
                         <div className="relative cursor-pointer hover:opacity-70 transition 
                     p-10 border-neutral-300 flex flex-col justify-center items-center 
-                    gap-4 text-neutral-600 bg-slate-100"
+                    gap-4 text-neutral-600 bg-white"
                             onClick={() => open()}
                         >
                             <TbPhotoPlus
